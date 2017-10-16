@@ -1,0 +1,110 @@
+@mixin d-flex {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 48rem){
+		flex-direction: column;
+	}
+}
+
+@mixin image-left{
+	background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 50%;
+		min-height: 20rem;
+		display: flex;
+		align-items: flex-start;
+		@media (max-width: 48rem){
+		width: 100%;
+		}
+}
+@mixin image-right{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 50%;
+	min-height: 20rem;
+	display: flex;
+	align-items: flex-start;
+	@media (max-width: 48rem){
+	width: 100%;
+	}
+}
+@mixin title-left{
+	color:$c-light;
+	background-color: $c-dark;
+	padding:0.2rem 2rem;
+	margin: 0;
+	font-size: 4rem;
+	font-family: $f-head;
+	margin-top: 1rem;
+	margin-left:100%;
+	transform: translateX(-50%) rotate(10deg);
+	@media (max-width: 48rem){
+	font-size: 2.5rem;
+	margin-left:0;
+	transform: translateX(5%) rotate(10deg);
+
+	}
+}
+@mixin title-right{
+	color:$c-light;
+	background-color: $c-dark;
+	padding:0.2rem 2rem;
+	margin: 0;
+	font-size: 4rem;
+	font-family: $f-head;
+	margin-top: 1rem;
+	margin-right:100%;
+	transform: translateX(-50%) rotate(-10deg);
+	@media (max-width: 48rem){
+	font-size: 2.5rem;
+	transform: translateX(5%) rotate(-10deg);
+	}
+}
+@mixin content-right{
+	width: 50%;
+	display: flex;
+	align-items:center;
+	@media (max-width: 48rem){
+	width: 100%;
+	}
+}
+@mixin content-left{
+	width: 50%;
+	display: flex;
+	align-items:center;
+	@media (max-width: 48rem){
+	width: 100%;
+	order:1;
+	}
+}
+@mixin text-right{
+	width:95%;
+	margin-left: auto;
+	margin-top: 9rem;
+	font-size: 1.25rem;
+	color:$c-mgrey;
+	font-family: $f-body;
+	@media (max-width: 48rem){
+	padding-top:0.8rem;
+	width: 100%;
+	font-size: 1rem;
+	margin:0 auto;
+	}
+}
+@mixin text-left{
+	width:95%;
+	margin-right: auto;
+	margin-top: 9rem;
+	font-size: 1.25rem;
+	color:$c-mgrey;
+	font-family: $f-body;
+	@media (max-width: 48rem){
+	width: 100%;
+	padding-top:0.8rem;
+	font-size: 1rem;
+	margin:0 auto;
+	}
+	
+}

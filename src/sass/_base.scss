@@ -4,7 +4,7 @@
 html,body{
 	margin:0;
 	font-size:16px;
-	line-height:1.5;
+	line-height:1.6;
 	overflow-x: hidden;
 }
 
@@ -16,27 +16,26 @@ header{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			flex-wrap: wrap;
-			flex: 0 0 auto;
-			.nav-brand{
-				@media (max-width: 48rem){
-					display: block;
-					width:100px; 
-					margin: 0 auto;
+			@media (max-width: 48rem){
+					flex-direction: column;
+					text-align: center;
 					}
+			.nav-brand{
 				h1{
 				font-size:2rem;
 				font-family:$f-head;
-				color:  $c-lgrey;
+				color:  $c-dark;
 				margin: 0;
 				}
 			}
-			.nav-menu{
+			nav{
 				width: 50%;
+				max-width: 520px;
 				@media (max-width: 48rem){
-						max-width: 420px;
+						max-width: 26.25rem;
 						width: 100%;
 						margin: 0 auto;
+						padding: 1rem 0;
 					}											
 				ul{	
 					display: flex;
@@ -53,7 +52,17 @@ header{
 						font-size:0.8rem;
 						font-family:$f-base;
 						color:  $c-lgrey;
-						text-decoration: none;}
+						font-weight: bold;
+						text-decoration: none;
+						&:hover{
+							color:$c-mgrey;
+
+							}
+						@media (max-width: 48rem){
+						font-size:0.7rem;
+						width: 100%;
+							}
+						}
 					}
 				}
 
@@ -74,7 +83,7 @@ header{
 	.banner-content{
 		margin: 0 auto;
 		padding:0 1rem;
-		max-width: 1080px;
+		max-width: 67.5rem;
 		width: 100%;
 		h2{
 			font-size:2.25rem;
@@ -83,15 +92,172 @@ header{
 
 		}
 		.cta-btn{
-			font-size:1.2rem;
+			font-size:1.5rem;
 			font-family:$f-base;
-			border: 2px solid $c-dark;
 			padding:0.2em 0.3em;
+			border:none;
+			background-color: $c-dark;
+			color: $c-light;
+			&:hover{
+				background-color:$c-mgrey;
+
+			}
 
 		}
 
 	}
 	
+}
+
+/* see section */
+
+.see{
+	@include d-flex;
+	.left-content{
+		@include content-left;
+		
+		p{	@include text-left;
+
+		}
+
+	}
+	.right-content{
+		background-image: url('../img/see.jpg');
+		@include image-right;
+		h3{	
+			@include title-right;
+			
+		}
+		
+	}
+
+}
+
+/* smell section */
+.smell{
+	@include d-flex;
+	.left-content{
+		background-image: url('../img/smell.jpg');
+		@include image-left;
+		h3{	
+			
+			@include title-left;
+			
+		}
+
+	}
+	.right-content{
+		@include content-right;
+		p{	
+			@include text-right;
+
+		}		
+		
+	}
+
+}
+
+/* touch section */
+
+.touch{
+	@include d-flex;
+	.left-content{
+		@include content-left;
+		
+		p{	@include text-left;
+
+		}
+
+	}
+	.right-content{
+		background-image: url('../img/touch.jpg');
+		@include image-right;
+		h3{	
+			@include title-right;
+			
+		}
+		
+	}
+
+}
+
+/* hear section */
+.hear{
+	@include d-flex;
+	.left-content{
+		background-image: url('../img/hear.jpg');
+		@include image-left;
+		h3{	
+			
+			@include title-left;
+			
+		}
+
+	}
+	.right-content{
+		@include content-right;
+		p{	
+			@include text-right;
+
+		}		
+		
+	}
+
+}
+
+/* feel section */
+
+.feel{
+	@include d-flex;
+	.left-content{
+		@include content-left;
+		
+		p{	@include text-left;
+
+		}
+
+	}
+	.right-content{
+		background-image: url('../img/feel.jpg');
+		@include image-right;
+		h3{	
+			@include title-right;
+			
+		}
+		
+	}
+
+}
+
+
+footer{
+	background-color: rgba($c-lgrey,0.3);
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.copy{
+			color: $c-lgrey;
+			font-size: 0.7rem;
+			order:2;
+		}
+		ul{
+			display: flex;
+			list-style-type: none;
+			flex-wrap: wrap;
+			li{
+				min-width:6rem;
+				a{
+					text-decoration: none;
+					color: $c-dark;
+					font-size: 0.7rem;
+					font-family: $f-base;
+				}
+				
+			}
+		}
+	}
 }
 
 
