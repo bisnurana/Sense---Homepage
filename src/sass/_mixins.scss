@@ -10,6 +10,7 @@
 	background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		filter: grayscale(100%);
 		width: 50%;
 		min-height: 20rem;
 		display: flex;
@@ -22,6 +23,7 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	filter: grayscale(100%);
 	width: 50%;
 	min-height: 20rem;
 	display: flex;
@@ -31,11 +33,11 @@
 	}
 }
 @mixin title-left{
-	color:$c-light;
-	background-color: $c-dark;
-	padding:0.2rem 2rem;
+	color:$c-dark;
+	background-color:$c-light;
+	padding:0.2rem 1rem;
 	margin: 0;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-family: $f-head;
 	margin-top: 1rem;
 	margin-left:100%;
@@ -48,11 +50,11 @@
 	}
 }
 @mixin title-right{
-	color:$c-light;
-	background-color: $c-dark;
-	padding:0.2rem 2rem;
+	color:$c-dark;
+	background-color: $c-light;
+	padding:0.3rem 1rem;
 	margin: 0;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-family: $f-head;
 	margin-top: 1rem;
 	margin-right:100%;
@@ -82,7 +84,7 @@
 @mixin text-right{
 	width:95%;
 	margin-left: auto;
-	margin-top: 9rem;
+	margin-top: 10rem;
 	font-size: 1.1rem;
 	color:$c-mgrey;
 	font-family: $f-body;
@@ -96,7 +98,7 @@
 @mixin text-left{
 	width:95%;
 	margin-right: auto;
-	margin-top: 9rem;
+	margin-top: 10rem;
 	font-size: 1.1rem;
 	color:$c-mgrey;
 	font-family: $f-body;
